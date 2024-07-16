@@ -102,7 +102,7 @@ const CardNews = () => {
     <Container>
       <Title>
         <News />
-        카드뉴스
+        뭐약뉴스
       </Title>
       <Explanation>이약뭐약에서 제공하는 카드뉴스입니다</Explanation>
       <Contents>
