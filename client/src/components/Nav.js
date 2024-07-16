@@ -1,8 +1,19 @@
 /** @format */
+/**
+File Name : Nav
+Description : 하단 네브게이션바
+Author : 민선옥
+
+History
+Date        Author   Status    Description
+2024.07.16  민선옥   Created
+*/ 
+
 import styled from "styled-components";
 
 const NavContainer = styled.nav`
   position: fixed;
+  z-index: 10;
   bottom: 0;
   width: 100vw;
   height: 100px;
@@ -34,25 +45,28 @@ function Nav() {
     <NavContainer>
       <ul>
         <li>
-          <img src={`${process.env.PUBLIC_URL}/img/home.png`} alt="Logo" />
+          <img src={`${process.env.PUBLIC_URL}/img/home.png`} alt="Home" />
           <p>홈</p>
         </li>
         <li>
           <img
             src={`${process.env.PUBLIC_URL}/img/talk.png`}
-            alt="Logo"
+            alt="talk"
             style={{ width: "40px" }}
           />
           <p>상담</p>
         </li>
         <li>
-          <img src={`${process.env.PUBLIC_URL}/img/calender.png`} alt="Logo" />
+          <img
+            src={`${process.env.PUBLIC_URL}/img/calender.png`}
+            alt="calender"
+          />
           <p>캘린더</p>
         </li>
         <li>
           <img
             src={`${process.env.PUBLIC_URL}/img/user.png`}
-            alt="Logo"
+            alt="user"
             style={{ width: "30px" }}
           />
           <p>마이페이지</p>
