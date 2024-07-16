@@ -32,8 +32,8 @@ const SmallTitle = styled.div`
   font-weight: 500;
 `;
 
-const Pill = styled.img.attrs({
-  src: `${process.env.PUBLIC_URL}/img/pill.png`,
+const PillIcon = styled.img.attrs({
+  src: `${process.env.PUBLIC_URL}/img/pillIcon.png`,
   alt: 'pill img',
 })`
   width: 55px;
@@ -76,7 +76,7 @@ const NewsTitle = ({ num }) => {
     } else if (num === 2) {
       return <QnA />;
     } else {
-      return <Pill />;
+      return <PillIcon />;
     }
   };
 
