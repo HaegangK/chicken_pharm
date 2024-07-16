@@ -8,11 +8,10 @@ Author : 민선옥
 History
 Date        Author   Status    Description
 2024.07.16  민선옥   Created
-*/ 
+2024.07.16  임지영   Modified    placeholder 추가
+*/
 
-
-import styled from "styled-components";
-
+import styled from 'styled-components';
 
 const SearchContainer = styled.div`
   position: absolute;
@@ -35,26 +34,30 @@ const SearchInput = styled.input`
   height: 100%;
   border: none;
   background: none;
+
+  &::placeholder {
+    color: #6c6b6b;
+  }
 `;
 
 const SearchIcon = styled.img`
   width: 24px;
 `;
 
-function SearchBox() {
+function SearchBox({ placeholder }) {
   return (
-        <SearchContainer>
-          <SearchIcon
-            src={`${process.env.PUBLIC_URL}/img/search_icon.png`}
-            alt="search"
-            style={{ width: "20px" }}
-          />
-          <SearchInput />
-          <SearchIcon
-            src={`${process.env.PUBLIC_URL}/img/camera.png`}
-            alt="camera"
-          />
-        </SearchContainer>
+    <SearchContainer>
+      <SearchIcon
+        src={`${process.env.PUBLIC_URL}/img/search_icon.png`}
+        alt="search"
+        style={{ width: '20px' }}
+      />
+      <SearchInput placeholder={placeholder} />
+      <SearchIcon
+        src={`${process.env.PUBLIC_URL}/img/camera.png`}
+        alt="camera"
+      />
+    </SearchContainer>
   );
 }
 
