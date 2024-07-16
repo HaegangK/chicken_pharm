@@ -6,6 +6,7 @@ Author : 임지영
 History
 Date        Author   Status    Description
 2024.07.16  임지영   Created
+2024.07.16  임지영   Modified    색상 #ffeb41
 */
 
 import styled from 'styled-components';
@@ -14,7 +15,7 @@ import SearchBox from '../search/SearchBox';
 const MainHeaderContainer = styled.div`
   width: 100vw;
   height: 25vh;
-  background-color: #ffe612;
+  background-color: #ffeb41;
   display: flex;
   justify-content: center;
   align-items: center;

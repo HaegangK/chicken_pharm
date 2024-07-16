@@ -8,9 +8,9 @@ Author : 민선옥
 History
 Date        Author   Status    Description
 2024.07.16  민선옥   Created
-*/ 
+*/
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
   background-color: #f8f8f8;
