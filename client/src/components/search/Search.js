@@ -9,8 +9,10 @@ Date        Author   Status    Description
 2024.07.16  민선옥   Created
 */ 
 
+import React, { useState } from 'react';
 import SearchBox from "./SearchBox"
 import SearchHistory from "./SearchHistory";
+import PharmExp  from "./PharmExp";
 import Nav from "../Nav";
 import styled from "styled-components";
 
@@ -22,15 +24,18 @@ const BackgroundHeader = styled.div`
 `;
 
 function Search() {
+  const [searchQuery, setSearchQuery] = useState('');
+  
   return (
     <>
       <BackgroundHeader>
-        <SearchBox/>
+        <SearchBox setSearchQuery={setSearchQuery} />
       </BackgroundHeader>
-      <SearchHistory />
+      {searchQuery ? <PharmExp searchQuery={searchQuery} /> : <SearchHistory />}
       <Nav />
     </>
   );
 }
 
 export default Search;
+

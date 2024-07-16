@@ -33,6 +33,7 @@ const SearchInput = styled.input`
   flex: 1;
   height: 100%;
   border: none;
+  outline: none;
   background: none;
 
   &::placeholder {
@@ -44,18 +45,22 @@ const SearchIcon = styled.img`
   width: 24px;
 `;
 
-function SearchBox({ placeholder }) {
+function SearchBox({ placeholder, setSearchQuery }) {
+  const handleChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
   return (
     <SearchContainer>
       <SearchIcon
         src={`${process.env.PUBLIC_URL}/img/search_icon.png`}
-        alt="search"
+        alt='search'
         style={{ width: '20px' }}
       />
-      <SearchInput placeholder={placeholder} />
+      <SearchInput placeholder={placeholder} onChange={handleChange} />
       <SearchIcon
         src={`${process.env.PUBLIC_URL}/img/camera.png`}
-        alt="camera"
+        alt='camera'
       />
     </SearchContainer>
   );

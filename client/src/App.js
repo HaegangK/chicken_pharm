@@ -18,8 +18,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/search" element={<Search />} />
+        <Route path='/' element={<Main />} />
+        <Route path='/search' element={<Search />} />
       </Routes>
     </Router>
   );
