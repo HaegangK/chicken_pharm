@@ -99,19 +99,11 @@ const News2 = ({ onClick }) => (
   </NewsImage>
 );
 
-<<<<<<< HEAD
 const News3 = ({ onClick }) => (
   <NewsImage num={3} onClick={onClick}>
     <img
       src={`${process.env.PUBLIC_URL}/img/cardNews/news3_1.png`}
       alt="News 3"
-=======
-const News3 = () => (
-  <NewsImage num={3}>
-    <img
-      src={`${process.env.PUBLIC_URL}/img/news3_1.png`}
-      alt='News 3'
->>>>>>> c3701e7 (:zap: 폰트 설정 및 알람설정 추가)
     />
   </NewsImage>
 );
