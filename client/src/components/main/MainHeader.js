@@ -23,7 +23,7 @@ const MainHeaderContainer = styled.div`
 
 const Logo = styled.img.attrs({
   src: `${process.env.PUBLIC_URL}/img/logo.png`,
-  alt: 'Logo',
+  alt: 'Logo'
 })`
   width: 300px;
   height: auto;

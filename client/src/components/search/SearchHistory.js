@@ -1,4 +1,4 @@
-/** @format */
+
 
 /**
 File Name : ShearchHistory
@@ -13,7 +13,6 @@ Date        Author   Status    Description
 import styled from "styled-components";
 
 const HistoryCotainer = styled.div`
-  padding-top: 30px;
 `;
 
 const HistoryInner = styled.div`

@@ -1,4 +1,4 @@
-/** @format */
+
 /**
 File Name : App
 Description : app.js

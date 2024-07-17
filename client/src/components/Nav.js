@@ -1,4 +1,3 @@
-/** @format */
 /**
 File Name : Nav
 Description : 하단 네브게이션바
@@ -7,9 +6,10 @@ Author : 민선옥
 History
 Date        Author   Status    Description
 2024.07.16  민선옥   Created
-*/ 
+2024.07.17  민선옥   알람설정 추가
+*/
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const NavContainer = styled.nav`
   position: fixed;
@@ -45,29 +45,40 @@ function Nav() {
     <NavContainer>
       <ul>
         <li>
-          <img src={`${process.env.PUBLIC_URL}/img/home.png`} alt="Home" />
-          <p>홈</p>
-        </li>
-        <li>
           <img
             src={`${process.env.PUBLIC_URL}/img/talk.png`}
-            alt="talk"
-            style={{ width: "40px" }}
+            alt='talk'
+            style={{ width: '40px' }}
           />
           <p>상담</p>
         </li>
-        <li>
+        <li style={{ marginRight: '15px' }}>
           <img
             src={`${process.env.PUBLIC_URL}/img/calender.png`}
-            alt="calender"
+            alt='calender'
           />
           <p>캘린더</p>
         </li>
         <li>
           <img
+            src={`${process.env.PUBLIC_URL}/img/home.png`}
+            alt='Home'
+            style={{ position: 'absolute', top: '-10px', width: '50px' }}
+          />
+        </li>
+        <li style={{ marginLeft: '15px' }}>
+          <img
+            src={`${process.env.PUBLIC_URL}/img/bell.svg`}
+            alt='bell'
+            style={{ width: '30px' }}
+          />
+          <p>알람설정</p>
+        </li>
+        <li>
+          <img
             src={`${process.env.PUBLIC_URL}/img/user.png`}
-            alt="user"
-            style={{ width: "30px" }}
+            alt='user'
+            style={{ width: '30px' }}
           />
           <p>마이페이지</p>
         </li>

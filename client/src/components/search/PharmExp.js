@@ -9,32 +9,55 @@
  *
  */
 
+import styled from 'styled-components';
 
-import styled from "styled-components";
+const PharmExpContainer = styled.div``;
 
 const PharmHeader = styled.div`
-`
-const Ache = styled.div`
-  width: 30px;
-  height: 15px;
-  background-color: #ffe612;
+  display: flex;
+  width: 80vw;
+  margin: auto;
+  & section {
+    margin-left: 30px;
+  }
+`;
+
+const Chips = styled.div`
+  display: flex;
+  width: 100%;
+  height: 30px;
+
+  & p {
+    width: 45px;
+    height: 25px;
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 25px;
+    background-color: #ffe612;
+  }
 `;
 
 const PharmExplanation = styled.div``;
 
 function PharmExp() {
   return (
-    <>
+    <PharmExpContainer>
       <PharmHeader>
-        <img src={`${process.env.PUBLIC_URL}/img/pill.png`} alt="pill" />
-        <h3>타이레놀</h3>
-        <Ache></Ache>
+        <img src={`${process.env.PUBLIC_URL}/img/pill.png`} alt='pill' />
+        <section>
+          <h3>타이레놀</h3>
+          <Chips>
+            <p>두통</p>
+            <p>신경통</p>
+            <p>근육통</p>
+          </Chips>
+        </section>
       </PharmHeader>
       <PharmExplanation></PharmExplanation>
-    </>
-  );  
+    </PharmExpContainer>
+  );
 }
 
 export default PharmExp;
-
-

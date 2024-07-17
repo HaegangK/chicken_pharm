@@ -9,13 +9,11 @@ Date        Author   Status    Description
 */
 
 import styled from 'styled-components';
-import '../../assets/font/font.css';
 import MainHeader from './MainHeader';
 import CardNews from './CardNews';
 
 const MainContainer = styled.div`
   width: 100vw;
-  font-family: 'Pretendard';
 `;
 
 const Main = () => {
