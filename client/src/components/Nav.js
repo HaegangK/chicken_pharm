@@ -16,10 +16,13 @@ const NavContainer = styled.nav`
   z-index: 10;
   bottom: 0;
   width: 100vw;
-  height: 100px;
+  height: 80px;
+  background-color: #ffffff;
   & ul {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
     padding: 0;
     & li {
       display: flex;
@@ -46,7 +49,7 @@ function Nav() {
       <ul>
         <li>
           <img
-            src={`${process.env.PUBLIC_URL}/img/talk.png`}
+            src={`${process.env.PUBLIC_URL}/img/nav/talk.png`}
             alt='talk'
             style={{ width: '40px' }}
           />
@@ -54,21 +57,21 @@ function Nav() {
         </li>
         <li style={{ marginRight: '15px' }}>
           <img
-            src={`${process.env.PUBLIC_URL}/img/calender.png`}
+            src={`${process.env.PUBLIC_URL}/img/nav/calender.png`}
             alt='calender'
           />
           <p>캘린더</p>
         </li>
         <li>
           <img
-            src={`${process.env.PUBLIC_URL}/img/home.png`}
+            src={`${process.env.PUBLIC_URL}/img/nav/home.png`}
             alt='Home'
-            style={{ position: 'absolute', top: '-10px', width: '50px' }}
+            style={{ position: 'absolute', top: '-20px', width: '50px' }}
           />
         </li>
         <li style={{ marginLeft: '15px' }}>
           <img
-            src={`${process.env.PUBLIC_URL}/img/bell.svg`}
+            src={`${process.env.PUBLIC_URL}/img/nav/bell.svg`}
             alt='bell'
             style={{ width: '30px' }}
           />
@@ -76,7 +79,7 @@ function Nav() {
         </li>
         <li>
           <img
-            src={`${process.env.PUBLIC_URL}/img/user.png`}
+            src={`${process.env.PUBLIC_URL}/img/nav/user.png`}
             alt='user'
             style={{ width: '30px' }}
           />

@@ -13,16 +13,30 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import PillExp from './PillExp';
+import Review from './Review';
 
 const SearchScreenContainer = styled.div``;
 
 const PillHeader = styled.div`
   display: flex;
+  align-items: flex-start;
   width: 80vw;
   margin: auto;
 
   & section {
     margin-left: 30px;
+  }
+`;
+
+const PillTitle = styled.div`
+  & p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  & span {
+    color: #696969;
+    font-size: 10px;
+    font-style: italic;
   }
 `;
 
@@ -32,19 +46,27 @@ const Chips = styled.div`
   height: 30px;
 
   & p {
-    width: 45px;
+    width: 48px;
     height: 25px;
     margin-right: 10px;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 500;
     text-align: center;
     line-height: 25px;
+    border-radius: 5px;
     background-color: var(--main-color);
   }
 `;
 
+const Exp = styled.p`
+  margin: 15px 20px;
+  color: #696969;
+  font-size: 14px;
+  text-align: end;
+`;
+
 const PillMore = styled.div`
-  margin-top: 60px;
+  margin-top: 30px;
 `;
 
 const Menu = styled.div`
@@ -75,7 +97,12 @@ function SearchScreen() {
       <PillHeader>
         <img src={`${process.env.PUBLIC_URL}/img/pill.png`} alt='pill' />
         <section>
-          <h3>타이레놀</h3>
+          <PillTitle>
+            <h3>타이레놀정500밀리그람 (아세트아미노펜)</h3>
+            <span>Tylenol Tablet 500mg</span>
+            <p>한국존슨앤드존슨판매(유)</p>
+            <span>Johnson & Johnson Consumer Health Korea</span>
+          </PillTitle>
           <Chips>
             <p>두통</p>
             <p>신경통</p>
@@ -83,21 +110,25 @@ function SearchScreen() {
           </Chips>
         </section>
       </PillHeader>
+      <Exp>※ 태그들을 클릭해 관련 증상들을 모아보세요.</Exp>
       <PillMore>
         <Menu>
           <p
             className={activeTab === 0 ? 'active' : ''}
-            onClick={() => setActiveTab(0)}>
+            onClick={() => setActiveTab(0)}
+          >
             효능•용법
           </p>
           <p
             className={activeTab === 1 ? 'active' : ''}
-            onClick={() => setActiveTab(1)}>
+            onClick={() => setActiveTab(1)}
+          >
             리뷰
           </p>
         </Menu>
         <Contants>
-          <PillExp />
+          {activeTab === 0 && <PillExp />}
+          {activeTab === 1 && <Review />}
         </Contants>
       </PillMore>
     </SearchScreenContainer>

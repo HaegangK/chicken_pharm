@@ -17,7 +17,7 @@ import styled from 'styled-components';
 
 const BackgroundHeader = styled.div`
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   width: 100vw;
   height: 55px;
   background-color: var(--main-color);

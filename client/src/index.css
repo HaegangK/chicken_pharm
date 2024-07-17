@@ -11,3 +11,16 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+div,p,li{
+  box-sizing: border-box;
+}
+
+h3, ul, p{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
