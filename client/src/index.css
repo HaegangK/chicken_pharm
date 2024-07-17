@@ -1,5 +1,10 @@
 @import url('./assets/font/font.css');
 
+:root {
+  --main-color: #FFEB41;
+}
+
+
 body {
   font-family: 'Pretendard', sans-serif;
   margin: 0;

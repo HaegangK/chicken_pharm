@@ -11,7 +11,7 @@ Date        Author   Status    Description
 import React, { useState } from 'react';
 import SearchBox from './SearchBox';
 import SearchHistory from './SearchHistory';
-import PharmExp from './PharmExp';
+import SearchScreen from './SearchScreen';
 import Nav from '../Nav';
 import styled from 'styled-components';
 
@@ -20,7 +20,7 @@ const BackgroundHeader = styled.div`
   margin-bottom: 60px;
   width: 100vw;
   height: 55px;
-  background-color: #ffe612;
+  background-color: var(--main-color);
 `;
 
 function Search() {
@@ -31,7 +31,7 @@ function Search() {
       <BackgroundHeader>
         <SearchBox setSearchQuery={setSearchQuery} />
       </BackgroundHeader>
-      {searchQuery ? <PharmExp searchQuery={searchQuery} /> : <SearchHistory />}
+      {searchQuery ? <SearchScreen searchQuery={searchQuery} /> : <SearchHistory />}
       <Nav />
     </>
   );
