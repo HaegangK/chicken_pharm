@@ -6,13 +6,14 @@ Author : 임지영
 History
 Date        Author   Status    Description
 2024.07.16  임지영   Created
+2024.07.18  임지영   Modified    margin값 변경
 */
 
 import styled from 'styled-components';
 import '../../assets/font/font.css';
 
 const DescriptionContainer = styled.div`
-  margin: 5vh 8vw;
+  margin: 5vh 7vw;
 `;
 
 const ChickenPharm = styled.div`
@@ -52,7 +53,7 @@ const NewsDescription = ({ num }) => {
         <Description>
           아 몸이 으슬으슬
           <br /> 나 지금 열나는 거 같은데.. 🤒 <br />
-          이렇게 생각들 땐 이미 늦었다. 지금 당장 이약뭐약과 함께
+          이렇게 생각들 땐 이미 늦었다🚨 지금 당장 이약뭐약과 함께
           <br />
           해열제 성분 종류에 대해 알아보자!! 7가지에 대해 알아봅시다
         </Description>
