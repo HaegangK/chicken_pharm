@@ -1,4 +1,3 @@
-
 /**
 File Name : App
 Description : app.js
@@ -9,12 +8,14 @@ Date        Author   Status    Description
 2024.07.16  민선옥   Created
 2024.07.16  임지영   Modified    Home -> Main(메인페이지)   
 2024.07.16  임지영   Modified    + News (카드뉴스)
+2024.07.17  임지영   Modified    + Calendar 
 */
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Main from './components/main/Main';
 import Search from './components/search/Search';
 import News from './components/mobileCardNews/News';
+import Calendar from './components/calendar/CalendarPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/news1" element={<News num={1} />} />
         <Route path="/news2" element={<News num={2} />} />
         <Route path="/news3" element={<News num={3} />} />
+        <Route path="/calendar" element={<Calendar />} />
       </Routes>
     </Router>
   );
